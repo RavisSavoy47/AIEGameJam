@@ -20,5 +20,6 @@ public class MovementBehaviour : MonoBehaviour
     public virtual void Update()
     {
         transform.position += Velocity * Time.deltaTime;
+        GetComponent<Rigidbody>().velocity = transform.forward;
     }
 }

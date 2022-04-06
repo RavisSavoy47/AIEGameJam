@@ -28,6 +28,7 @@ public class EnemyMovementBehaviour : MovementBehaviour
     {
         Vector3 direction = _target.position - transform.position;
         Velocity = direction.normalized * Speed;
+        GetComponent<Rigidbody>().velocity = transform.forward;
 
         base.Update();
     }
