@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4058866896921748}
   - component: {fileID: 33718462556574640}
   - component: {fileID: 23759752699054724}
+  - component: {fileID: 2734992527818589149}
+  - component: {fileID: 5939167999799163598}
+  - component: {fileID: 8365986269356800201}
+  - component: {fileID: 4642137465211502470}
   m_Layer: 0
   m_Name: SM_Bean_Cop_01
   m_TagString: Enemy
@@ -82,6 +86,67 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2734992527818589149
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283017171755564}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &5939167999799163598
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283017171755564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.591751
+  m_Height: 2.1222806
+  m_Direction: 1
+  m_Center: {x: -0.0019368529, y: 1.0611403, z: 0.07858753}
+--- !u!114 &8365986269356800201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283017171755564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2130eec1e885694a9f4667f8cd906a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _velocity: {x: 0, y: 0, z: 0}
+  _target: {fileID: 4283527512771772, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+  _speed: 5
+  _damage: 2
+--- !u!114 &4642137465211502470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283017171755564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2452af3b178784a9a9b3d50bfa8c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
+  _isAlive: 0
+  _destroyOnDeath: 1
 --- !u!1 &462308037685826460
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletRef: {fileID: 3762292162437952870, guid: cbece37ffe575eb4eb4dbe2a612b57af, type: 3}
-  _bulletForce: 10
+  _bulletForce: 30
   _owner: {fileID: 599363701976237560}
 --- !u!114 &3483273458080416247
 MonoBehaviour:
@@ -140,8 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f3daefb5d85964782146a822523896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   _gun: {fileID: 7126111795536117}
   _bulletCooldown: 0.5
+  _destroyOnHit: 0
   _ammo: 0
   _infiniteAmmo: 1
 --- !u!1001 &600363921099169462

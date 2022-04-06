@@ -28,7 +28,6 @@ public class EnemyMovementBehaviour : MovementBehaviour
     {
         Vector3 direction = _target.position - transform.position;
         Velocity = direction.normalized * Speed;
-        GetComponent<Rigidbody>().velocity = transform.forward;
 
         base.Update();
     }
@@ -44,11 +43,5 @@ public class EnemyMovementBehaviour : MovementBehaviour
             //destorys this enemy
             Destroy(gameObject);
         }
-    }
-
-    //destorys enemy on clicks
-    private void OnMouseDown()
-    {
-        Destroy(gameObject);
     }
 }

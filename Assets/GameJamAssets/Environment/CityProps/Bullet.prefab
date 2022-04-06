@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _lifeTime: 5
+  _lifeTime: 1
   _destroyOnHit: 1
 --- !u!54 &2944286186253265021
 Rigidbody:

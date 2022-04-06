@@ -10,6 +10,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private Vector3 _moveDirection;
     private Vector2 _rotationDirection;
     private Camera _camera;
+    [SerializeField] private Transform orientation;
     [SerializeField]
     private float _rotationSpeedY;
     [SerializeField]

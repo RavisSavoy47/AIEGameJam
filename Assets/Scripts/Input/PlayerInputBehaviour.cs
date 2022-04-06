@@ -19,11 +19,10 @@ public class PlayerInputBehaviour : MonoBehaviour
     {
         _playerMovement.MoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
         _playerMovement.MouseDirection = new Vector2(Input.GetAxisRaw("MouseX"), Input.GetAxisRaw("MouseY")).normalized;
-    }
 
-    //only fires if your clicking on the player
-    private void OnMouseDown()
-    {
-        _gun.Fire();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _gun.Fire();
+        }
     }
 }
