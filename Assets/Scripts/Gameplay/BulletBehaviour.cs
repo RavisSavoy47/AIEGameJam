@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BullletBehaviour : MonoBehaviour
+public class BulletBehaviour : MonoBehaviour
 {
-    private string _ownerTage;
+    private string _ownerTag;
     [SerializeField]
     private float _damage;
     [SerializeField]
